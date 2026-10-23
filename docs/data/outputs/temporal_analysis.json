@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "date": "2026-10-20",
+    "date_reliability_score": "100.0%",
+    "total_dated_records": 8,
+    "total_records": 8,
+    "is_sufficient_for_temporal_analysis": true
+  },
+  "timeline": [
+    {
+      "period": "2026-01",
+      "total_actions": 1,
+      "verified_actions": 1,
+      "candidate_actions": 0,
+      "gap_audits": 0,
+      "regulatory_milestone": "European Commission GPAI Code of Practice Public Consultation Deadline",
+      "records": [
+        {
+          "id": "rec_003",
+          "project": "Linux Foundation AI & Data",
+          "institution": "European Commission",
+          "status": "independently_verified",
+          "date": "2026-01-24"
+        }
+      ]
+    },
+    {
+      "period": "2026-02",
+      "total_actions": 3,
+      "verified_actions": 3,
+      "candidate_actions": 0,
+      "gap_audits": 0,
+      "regulatory_milestone": "NIST AISIC Working Groups & ISO/IEC JTC 1/SC 42 Model Card Ballot",
+      "records": [
+        {
+          "id": "rec_002",
+          "project": "vLLM",
+          "institution": "NIST AI Safety Consortium (AISIC)",
+          "status": "independently_verified",
+          "date": "2026-02-18"
+        },
+        {
+          "id": "rec_004",
+          "project": "Transformers (Hugging Face)",
+          "institution": "ISO/IEC JTC 1/SC 42",
+          "status": "documented",
+          "date": "2026-02-04"
+        },
+        {
+          "id": "rec_006",
+          "project": "PyTorch",
+          "institution": "EU AI Act (Regulation EU 2024/1689)",
+          "status": "documented",
+          "date": "2026-02-14"
+        }
+      ]
+    },
+    {
+      "period": "2026-03",
+      "total_actions": 4,
+      "verified_actions": 1,
+      "candidate_actions": 2,
+      "gap_audits": 1,
+      "regulatory_milestone": "CEN-CENELEC JTC 21 Plenary & Harmonised Standard Draft Deliverables",
+      "records": [
+        {
+          "id": "rec_001",
+          "project": "PyTorch",
+          "institution": "CEN-CENELEC JTC 21",
+          "status": "gap",
+          "date": "2026-03-12"
+        },
+        {
+          "id": "rec_005",
+          "project": "ONNX (Open Neural Network Exchange)",
+          "institution": "IEEE Standards Association (IEEE-SA)",
+          "status": "documented",
+          "date": "2026-03-01"
+        },
+        {
+          "id": "rec_007",
+          "project": "scikit-learn",
+          "institution": "CEN-CENELEC JTC 21",
+          "status": "candidate",
+          "date": "2026-03-10"
+        },
+        {
+          "id": "rec_008",
+          "project": "llama.cpp",
+          "institution": "CEN-CENELEC JTC 21",
+          "status": "candidate",
+          "date": "2026-03-18"
+        }
+      ]
+    }
+  ],
+  "peak_period": {
+    "period": "2026-03",
+    "total_actions": 4,
+    "verified_actions": 1,
+    "candidate_actions": 2,
+    "gap_audits": 1,
+    "regulatory_milestone": "CEN-CENELEC JTC 21 Plenary & Harmonised Standard Draft Deliverables",
+    "records": [
+      {
+        "id": "rec_001",
+        "project": "PyTorch",
+        "institution": "CEN-CENELEC JTC 21",
+        "status": "gap",
+        "date": "2026-03-12"
+      },
+      {
+        "id": "rec_005",
+        "project": "ONNX (Open Neural Network Exchange)",
+        "institution": "IEEE Standards Association (IEEE-SA)",
+        "status": "documented",
+        "date": "2026-03-01"
+      },
+      {
+        "id": "rec_007",
+        "project": "scikit-learn",
+        "institution": "CEN-CENELEC JTC 21",
+        "status": "candidate",
+        "date": "2026-03-10"
+      },
+      {
+        "id": "rec_008",
+        "project": "llama.cpp",
+        "institution": "CEN-CENELEC JTC 21",
+        "status": "candidate",
+        "date": "2026-03-18"
+      }
+    ]
+  },
+  "regulatory_context": "Temporal activity exhibits a pronounced surge in Q1 2026, directly coinciding with the European Commission's formal Standardisation Request deadlines to CEN-CENELEC JTC 21 (mandate M/593) and the NIST AISIC inaugural consortium technical contribution windows. Prior to 2026, engagement was predominantly unilateral contextual awareness rather than formal committee ballots."
+}

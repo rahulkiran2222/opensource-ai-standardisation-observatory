@@ -1,0 +1,1148 @@
+/* ==========================================================================
+   Open-Source AI Standardisation Observatory · Stage 2 Shared Stylesheet
+   Architecture: Empirical Suite Design Tokens, Layouts, and Shared Components
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* --------------------------------------------------------------------------
+   1. Design Tokens & CSS Custom Properties
+   -------------------------------------------------------------------------- */
+:root {
+  /* Surface & Background Palette (Warm Parchment / Cream Aesthetic) */
+  --bg-primary: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #F4EFEA;
+  --bg-surface-soft: #F9F7F3;
+  --bg-card: #FFFFFF;
+  --bg-canvas: #F8F6F1;
+  --bg-overlay: rgba(28, 25, 23, 0.45);
+
+  /* Borders & Dividers */
+  --border-subtle: #E7E3DC;
+  --border-strong: #DDD6C8;
+  --border-divider: #ECE8E0;
+  --border-focus: #9A3412;
+
+  /* Typography Colors (High Contrast, WCAG AA Compliant) */
+  --text-primary: #1C1917;       /* Stone 900 */
+  --text-secondary: #44403C;     /* Stone 700 */
+  --text-muted: #57534E;         /* Stone 600 */
+  --text-dim: #78716C;           /* Stone 500 */
+  --text-light: #A8A29E;         /* Stone 400 */
+  --text-inverse: #FFFFFF;
+
+  /* Primary Brand Accent (Warm Terracotta) */
+  --accent-terracotta: #9A3412;
+  --accent-terracotta-hover: #7C2D12;
+  --accent-terracotta-active: #63250E;
+  --accent-terracotta-bg: #FDF2E9;
+  --accent-terracotta-border: #FDBA74;
+  --accent-terracotta-subtle: #FFEDD5;
+
+  /* Semantic Status Palettes */
+  /* 1. Verified / Direct Evidence (Forest Green) */
+  --accent-green: #166534;
+  --accent-green-hover: #14532D;
+  --accent-green-bg: #F0FDF4;
+  --accent-green-border: #BBF7D0;
+
+  /* 2. Documented / Institutional Policy (Navy Blue) */
+  --accent-navy: #1E3A8A;
+  --accent-navy-hover: #172554;
+  --accent-navy-bg: #EFF6FF;
+  --accent-navy-border: #BFDBFE;
+
+  /* 3. Candidate / Unaudited (Warm Amber) */
+  --accent-amber: #92400E;
+  --accent-amber-hover: #78350F;
+  --accent-amber-bg: #FEF3C7;
+  --accent-amber-border: #FDE68A;
+
+  /* 4. Gap / Anomalous / Rejected (Deep Crimson) */
+  --accent-red: #991B1B;
+  --accent-red-hover: #7F1D1D;
+  --accent-red-bg: #FEF2F2;
+  --accent-red-border: #FECACA;
+
+  /* Sector Typology Highlights */
+  --tag-foundation-bg: #F3E8FF;
+  --tag-foundation-text: #6B21A8;
+  --tag-foundation-border: #E9D5FF;
+
+  --tag-sdo-bg: #E0F2FE;
+  --tag-sdo-text: #0369A1;
+  --tag-sdo-border: #BAE6FD;
+
+  --tag-academic-bg: #ECFDF5;
+  --tag-academic-text: #047857;
+  --tag-academic-border: #A7F3D0;
+
+  --tag-industry-bg: #FFFBEB;
+  --tag-industry-text: #B45309;
+  --tag-industry-border: #FDE68A;
+
+  /* Typography Stacks */
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(28, 25, 23, 0.03);
+  --shadow-sm: 0 1px 3px rgba(28, 25, 23, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(28, 25, 23, 0.06), 0 2px 4px -2px rgba(28, 25, 23, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(28, 25, 23, 0.08), 0 4px 6px -4px rgba(28, 25, 23, 0.03);
+  --shadow-modal: 0 20px 30px -5px rgba(28, 25, 23, 0.22), 0 10px 10px -5px rgba(28, 25, 23, 0.08);
+
+  /* Border Radii */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-pill: 9999px;
+
+  /* Layout Widths */
+  --container-max-width: 1280px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Base Typography
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background-color: #EAE2D5;
+  color: #1C1917;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-terracotta);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Layout Structure
+   -------------------------------------------------------------------------- */
+.stage2-container {
+  max-width: var(--container-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem 3.5rem 1.5rem;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   4. Header & Navigation System
+   -------------------------------------------------------------------------- */
+.stage2-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.stage2-header-inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.stage2-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.stage2-brand:hover .stage2-brand-title {
+  color: var(--accent-terracotta);
+}
+
+.stage2-logo-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  background-color: #F2EDE4;
+  border: 1px solid #D5CEBF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #78350F;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: var(--shadow-xs);
+  flex-shrink: 0;
+}
+
+.stage2-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.stage2-brand-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-terracotta);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.stage2-brand-title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  transition: color 0.15s ease;
+}
+
+/* Desktop Navigation Links */
+.stage2-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stage2-nav a {
+  padding: 0.45rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-md);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.stage2-nav a:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-surface-alt);
+}
+
+.stage2-nav a.active {
+  color: var(--accent-terracotta);
+  font-weight: 600;
+  background-color: var(--accent-terracotta-bg);
+  border: 1px solid var(--accent-terracotta-border);
+}
+
+/* Back to Stage 1 Primary Application Button */
+.stage2-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #1C1917;
+  color: #FFFFFF !important;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  box-shadow: var(--shadow-xs);
+  flex-shrink: 0;
+}
+
+.stage2-back-btn:hover {
+  background-color: #292524;
+  transform: translateY(-1px);
+}
+
+/* Mobile Toggle & Collapsible Drawer */
+.stage2-mobile-toggle {
+  display: none;
+  padding: 0.45rem;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.stage2-mobile-drawer {
+  display: none;
+  border-top: 1px solid var(--border-subtle);
+  padding: 0.75rem 1.5rem 1rem 1.5rem;
+  background-color: var(--bg-primary);
+}
+
+.stage2-mobile-drawer.open {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stage2-mobile-drawer a {
+  padding: 0.55rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-md);
+}
+
+.stage2-mobile-drawer a.active {
+  background-color: var(--accent-terracotta-bg);
+  color: var(--accent-terracotta);
+  font-weight: 600;
+  border: 1px solid var(--accent-terracotta-border);
+}
+
+/* --------------------------------------------------------------------------
+   5. Methodological Notice Banner
+   -------------------------------------------------------------------------- */
+.stage2-notice {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-strong);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  line-height: 1.55;
+  box-shadow: var(--shadow-xs);
+}
+
+.stage2-notice-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--accent-terracotta);
+  color: #FFFFFF;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-xs);
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Page Header & Section Title Layouts
+   -------------------------------------------------------------------------- */
+.stage2-page-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1.75rem 0 1.25rem 0;
+  margin-bottom: 1.75rem;
+}
+
+.stage2-page-title {
+  font-family: var(--font-serif);
+  font-size: 2.15rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.stage2-page-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 860px;
+  line-height: 1.6;
+}
+
+.stage2-page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.stage2-page-meta span[aria-hidden="true"] {
+  color: var(--border-strong);
+}
+
+/* --------------------------------------------------------------------------
+   7. Analytical KPI Metrics Grid
+   -------------------------------------------------------------------------- */
+.stage2-grid-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.stage2-kpi-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem 1.25rem;
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage2-kpi-card:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border-strong);
+}
+
+.stage2-kpi-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.stage2-kpi-value {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.stage2-kpi-sub {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   8. Editorial Panels & Section Enclosures
+   -------------------------------------------------------------------------- */
+.stage2-panel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.stage2-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.stage2-panel-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.stage2-panel-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   9. Clean Academic Data Tables
+   -------------------------------------------------------------------------- */
+.stage2-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-xs);
+}
+
+.stage2-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.82rem;
+}
+
+.stage2-table th {
+  background-color: #FAF8F5;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stage2-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.stage2-table th.sortable:hover {
+  background-color: #F2EDE4;
+  color: var(--text-primary);
+}
+
+.stage2-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #F4EFEA;
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.stage2-table tr:last-child td {
+  border-bottom: none;
+}
+
+.stage2-table tr:hover td {
+  background-color: #FAF8F5;
+}
+
+.stage2-table td.mono {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.stage2-table td.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   10. Badges, Indicators & Typologies (Zero-Pill Restraint)
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.badge-verified {
+  background-color: var(--accent-green-bg);
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green-border);
+}
+
+.badge-documented {
+  background-color: var(--accent-navy-bg);
+  color: var(--accent-navy);
+  border: 1px solid var(--accent-navy-border);
+}
+
+.badge-candidate {
+  background-color: var(--accent-amber-bg);
+  color: var(--accent-amber);
+  border: 1px solid var(--accent-amber-border);
+}
+
+.badge-gap {
+  background-color: var(--accent-red-bg);
+  color: var(--accent-red);
+  border: 1px solid var(--accent-red-border);
+}
+
+/* Typology Tags for Sectors */
+.tag-foundation {
+  background-color: var(--tag-foundation-bg);
+  color: var(--tag-foundation-text);
+  border: 1px solid var(--tag-foundation-border);
+}
+
+.tag-sdo {
+  background-color: var(--tag-sdo-bg);
+  color: var(--tag-sdo-text);
+  border: 1px solid var(--tag-sdo-border);
+}
+
+.tag-academic {
+  background-color: var(--tag-academic-bg);
+  color: var(--tag-academic-text);
+  border: 1px solid var(--tag-academic-border);
+}
+
+.tag-industry {
+  background-color: var(--tag-industry-bg);
+  color: var(--tag-industry-text);
+  border: 1px solid var(--tag-industry-border);
+}
+
+/* --------------------------------------------------------------------------
+   11. Buttons & Action Links
+   -------------------------------------------------------------------------- */
+.stage2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  box-shadow: var(--shadow-xs);
+}
+
+.stage2-btn-sm {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.72rem;
+}
+
+.stage2-btn-primary {
+  background-color: #1C1917;
+  color: #FFFFFF;
+}
+
+.stage2-btn-primary:hover {
+  background-color: #292524;
+  transform: translateY(-1px);
+}
+
+.stage2-btn-terracotta {
+  background-color: var(--accent-terracotta);
+  color: #FFFFFF;
+}
+
+.stage2-btn-terracotta:hover {
+  background-color: var(--accent-terracotta-hover);
+  transform: translateY(-1px);
+}
+
+.stage2-btn-secondary {
+  background-color: #F2EDE4;
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.stage2-btn-secondary:hover {
+  background-color: #EBE4D8;
+  color: var(--text-primary);
+}
+
+.stage2-btn-outline {
+  background-color: transparent;
+  color: var(--text-muted);
+  border-color: var(--border-strong);
+}
+
+.stage2-btn-outline:hover {
+  background-color: var(--bg-surface-alt);
+  color: var(--text-primary);
+  border-color: var(--text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   12. Form Controls, Selects & Filter Tabs
+   -------------------------------------------------------------------------- */
+.stage2-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.stage2-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.stage2-select,
+.stage2-input {
+  padding: 0.55rem 0.85rem;
+  font-size: 0.82rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  min-height: 38px;
+}
+
+.stage2-select:focus,
+.stage2-input:focus {
+  border-color: var(--accent-terracotta);
+  box-shadow: 0 0 0 2px var(--accent-terracotta-subtle);
+}
+
+/* Segmented Filter Bar */
+.stage2-filter-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background-color: #F2EDE4;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+}
+
+.stage2-filter-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.stage2-filter-btn:hover {
+  color: var(--text-primary);
+}
+
+.stage2-filter-btn.active {
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-xs);
+}
+
+/* --------------------------------------------------------------------------
+   13. Visualization & Pathway Containers
+   -------------------------------------------------------------------------- */
+.stage2-graph-container {
+  background-color: #FAF8F5;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#graph-tooltip {
+  display: none;
+  position: absolute;
+  background-color: #1C1917;
+  color: #FAF8F5;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  pointer-events: none;
+  z-index: 40;
+  box-shadow: var(--shadow-md);
+  max-width: 280px;
+  line-height: 1.4;
+}
+
+/* Multi-hop Pathway Stepper */
+.stage2-pathway-chain {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #FAF8F5;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.stage2-pathway-node {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stage2-pathway-arrow {
+  color: var(--accent-terracotta);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   14. Data Quality Progress & Audit Bars
+   -------------------------------------------------------------------------- */
+.stage2-progress {
+  height: 8px;
+  width: 100%;
+  background-color: #E7E3DC;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.stage2-progress-fill {
+  height: 100%;
+  background-color: var(--accent-terracotta);
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
+
+.stage2-progress-fill.verified {
+  background-color: var(--accent-green);
+}
+
+.stage2-progress-fill.warning {
+  background-color: var(--accent-amber);
+}
+
+/* --------------------------------------------------------------------------
+   15. Code Blocks, Monospace & Terminal Embeds
+   -------------------------------------------------------------------------- */
+pre, code {
+  font-family: var(--font-mono);
+}
+
+code {
+  font-size: 0.85em;
+  background-color: #F2EDE4;
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-xs);
+  color: var(--accent-terracotta);
+}
+
+pre {
+  background-color: #1C1917;
+  color: #FAF8F5;
+  padding: 1.15rem;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+.stage2-code-box {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.stage2-code-box pre {
+  margin: 0;
+}
+
+.stage2-copy-btn {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FAF8F5;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.stage2-copy-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   16. Modal Dialog System
+   -------------------------------------------------------------------------- */
+.stage2-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-overlay);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.15s ease;
+}
+
+.stage2-modal-overlay.open {
+  display: flex;
+}
+
+.stage2-modal-content {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-xl);
+  max-width: 840px;
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-modal);
+  overflow: hidden;
+}
+
+.stage2-modal-header {
+  padding: 1.15rem 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FAF8F5;
+}
+
+.stage2-modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.stage2-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease;
+}
+
+.stage2-modal-close:hover {
+  color: var(--text-primary);
+}
+
+.stage2-modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.stage2-modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  background-color: #FAF8F5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   17. Toast Notifications
+   -------------------------------------------------------------------------- */
+#stage2-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #1C1917;
+  color: #FAF8F5;
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  z-index: 9999;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(6px);
+  border: 1px solid #44403C;
+}
+
+#stage2-toast.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   18. Editorial Footer
+   -------------------------------------------------------------------------- */
+.stage2-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 2.5rem 1.5rem;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: auto;
+  background-color: var(--bg-primary);
+}
+
+.stage2-footer a {
+  color: var(--text-muted);
+  transition: color 0.15s ease;
+}
+
+.stage2-footer a:hover {
+  color: var(--accent-terracotta);
+}
+
+/* --------------------------------------------------------------------------
+   19. Responsive Layouts & Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .stage2-nav {
+    display: none;
+  }
+
+  .stage2-mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .stage2-header {
+    padding: 0.65rem 1rem;
+  }
+
+  .stage2-container {
+    padding: 0 1rem 2.5rem 1rem;
+  }
+
+  .stage2-page-title {
+    font-size: 1.6rem;
+  }
+
+  .stage2-grid-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .stage2-panel {
+    padding: 1.15rem;
+  }
+
+  .stage2-back-btn span {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20. Academic Print Stylesheet
+   -------------------------------------------------------------------------- */
+@media print {
+  .stage2-header,
+  .stage2-footer,
+  .stage2-btn,
+  .stage2-modal-overlay,
+  #stage2-toast {
+    display: none !important;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  .stage2-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .stage2-panel {
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+
+  .stage2-table th {
+    background-color: #EEEEEE !important;
+    color: #000000 !important;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

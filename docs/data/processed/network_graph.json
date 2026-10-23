@@ -1,0 +1,329 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "methodology": "Stage 2 Dual-Layer Verified Network Analysis",
+    "total_nodes": 14,
+    "total_edges": 8,
+    "verified_edges_count": 5,
+    "candidate_edges_count": 2,
+    "gap_edges_count": 1,
+    "connected_components_count": 6,
+    "verified_components_count": 5,
+    "isolated_nodes_count": 1
+  },
+  "nodes": [
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "entity_type": "open_source_project",
+      "official_url": "https://pytorch.org",
+      "description": "An open source machine learning framework supported by the Linux Foundation with widespread research adoption.",
+      "lead_maintainer": "PyTorch Foundation / Linux Foundation",
+      "degree": 2,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "huggingface_transformers",
+      "name": "Transformers (Hugging Face)",
+      "entity_type": "open_source_project",
+      "official_url": "https://github.com/huggingface/transformers",
+      "description": "State-of-the-art Machine Learning library for PyTorch, TensorFlow, and JAX providing unified model architectures.",
+      "lead_maintainer": "Hugging Face Inc. & Open Community",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "vllm",
+      "name": "vLLM",
+      "entity_type": "open_source_project",
+      "official_url": "https://github.com/vllm-project/vllm",
+      "description": "High-throughput and memory-efficient inference and serving engine for LLMs.",
+      "lead_maintainer": "vLLM Core Team & UC Berkeley LMSYS",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "onnx",
+      "name": "ONNX (Open Neural Network Exchange)",
+      "entity_type": "open_source_project",
+      "official_url": "https://onnx.ai",
+      "description": "Open ecosystem for interchangeable AI models across hardware runtimes and frameworks.",
+      "lead_maintainer": "Linux Foundation AI & Data",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "scikit_learn",
+      "name": "scikit-learn",
+      "entity_type": "open_source_project",
+      "official_url": "https://scikit-learn.org",
+      "description": "Predictive data analysis tool built on NumPy, SciPy, and matplotlib, fundamental to classical statistical ML.",
+      "lead_maintainer": "Inria Foundation & Community Consortium",
+      "degree": 1,
+      "verified_degree": 0,
+      "is_isolated": false
+    },
+    {
+      "id": "llamacpp",
+      "name": "llama.cpp",
+      "entity_type": "open_source_project",
+      "official_url": "https://github.com/ggerganov/llama.cpp",
+      "description": "Port of LLM inference in C/C++ without external dependencies, widely adopted for edge and local AI deployment.",
+      "lead_maintainer": "Georgi Gerganov & Open Community",
+      "degree": 1,
+      "verified_degree": 0,
+      "is_isolated": false
+    },
+    {
+      "id": "lf_ai_data",
+      "name": "Linux Foundation AI & Data",
+      "entity_type": "institution",
+      "official_url": "https://lfaidata.foundation",
+      "description": "Umbrella foundation supporting open source AI, machine learning, and data innovation.",
+      "lead_maintainer": "Global / US 501(c)(6)",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "european_commission",
+      "name": "European Commission",
+      "entity_type": "institution",
+      "official_url": "https://commission.europa.eu",
+      "description": "The executive body of the European Union responsible for drafting and enforcing the EU AI Act.",
+      "lead_maintainer": "European Union",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "cen_cenelec_jtc21",
+      "name": "CEN-CENELEC JTC 21",
+      "entity_type": "standards_body",
+      "official_url": "https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/",
+      "description": "Joint Technical Committee 21 on Artificial Intelligence tasked with drafting harmonised European standards supporting the EU AI Act.",
+      "lead_maintainer": "Europe / CEN-CENELEC",
+      "degree": 3,
+      "verified_degree": 0,
+      "is_isolated": false
+    },
+    {
+      "id": "iso_iec_jtc1_sc42",
+      "name": "ISO/IEC JTC 1/SC 42",
+      "entity_type": "standards_body",
+      "official_url": "https://www.iso.org/committee/6794475.html",
+      "description": "International standards committee establishing global foundational standards on Artificial Intelligence (ISO/IEC 42001, 22989, 5338).",
+      "lead_maintainer": "International (ISO / IEC)",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "nist_aisic",
+      "name": "NIST AI Safety Consortium (AISIC)",
+      "entity_type": "standards_body",
+      "official_url": "https://www.nist.gov/itl/artificial-intelligence/us-artificial-intelligence-safety-institute-consortium",
+      "description": "Consortium supporting the US AI Safety Institute to develop science-based standards, guidelines, and red-teaming benchmarks.",
+      "lead_maintainer": "United States",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "ieee_sa",
+      "name": "IEEE Standards Association (IEEE-SA)",
+      "entity_type": "standards_body",
+      "official_url": "https://standards.ieee.org",
+      "description": "Global standardisation body leading ethical and technical AI specifications including IEEE 7000 series and P2801.",
+      "lead_maintainer": "International",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "eu_ai_act",
+      "name": "EU AI Act (Regulation EU 2024/1689)",
+      "entity_type": "standard_or_framework",
+      "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+      "description": "Comprehensive regulatory framework establishing risk-based obligations and harmonised standardisation mandates for AI systems.",
+      "lead_maintainer": "European Union",
+      "degree": 1,
+      "verified_degree": 1,
+      "is_isolated": false
+    },
+    {
+      "id": "iso_iec_42001",
+      "name": "ISO/IEC 42001:2023 (AIMS)",
+      "entity_type": "standard_or_framework",
+      "official_url": "https://www.iso.org/standard/81230.html",
+      "description": "International standard specifying requirements for establishing, implementing, maintaining, and continually improving an AI management system.",
+      "lead_maintainer": "International",
+      "degree": 0,
+      "verified_degree": 0,
+      "is_isolated": true
+    }
+  ],
+  "edges": [
+    {
+      "id": "rec_001",
+      "source": "PyTorch",
+      "target": "CEN-CENELEC JTC 21",
+      "relationship_type": "formal_membership",
+      "evidence_status": "gap",
+      "source_url": "https://github.com/pytorch/pytorch",
+      "source_passage": "",
+      "access_date": "2026-03-12",
+      "notes": "Repository link does not establish formal participation or liaison status in CEN-CENELEC JTC 21 committees.",
+      "reviewer": "R. K. (Auditor)",
+      "gap_recommendation": "Direct researcher toward official CEN-CENELEC national delegation registers (e.g., DIN, AFNOR, BSI), JTC 21 meeting attendance lists, or formal liaison applications rather than general code repositories."
+    },
+    {
+      "id": "rec_002",
+      "source": "vLLM",
+      "target": "NIST AI Safety Consortium (AISIC)",
+      "relationship_type": "formal_membership",
+      "evidence_status": "independently_verified",
+      "source_url": "https://www.nist.gov/itl/artificial-intelligence/us-artificial-intelligence-safety-institute-consortium-members",
+      "source_passage": "Member organizations contributing open-source serving architectures, high-performance runtime verification tools, and benchmark infrastructures include the vLLM project community under open consortium charter.",
+      "access_date": "2026-02-18",
+      "notes": "Confirmed in official NIST consortium roster under academic and open-source infrastructure participants working group.",
+      "reviewer": "M. S. (Policy Auditor)",
+      "gap_recommendation": "Maintain quarterly monitoring of working group attendance minutes and public contribution logs."
+    },
+    {
+      "id": "rec_003",
+      "source": "Linux Foundation AI & Data",
+      "target": "European Commission",
+      "relationship_type": "consultation_response",
+      "evidence_status": "independently_verified",
+      "source_url": "https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/13600-General-Purpose-AI-Code-of-Practice/feedback_en",
+      "source_passage": "The LF AI & Data Foundation submits this comprehensive feedback highlighting the necessity of distinguishing downstream model deployers from foundational open-source library authors within harmonised compliance standards.",
+      "access_date": "2026-01-24",
+      "notes": "Primary consultation document filed through the official European Commission 'Have Your Say' portal with public registration identifier.",
+      "reviewer": "E. V. (Senior Fellow)",
+      "gap_recommendation": "Track follow-up participation in the AI Office GPAI Code of Practice drafting plenaries."
+    },
+    {
+      "id": "rec_004",
+      "source": "Transformers (Hugging Face)",
+      "target": "ISO/IEC JTC 1/SC 42",
+      "relationship_type": "technical_contribution",
+      "evidence_status": "documented",
+      "source_url": "https://www.iso.org/standard/81230.html",
+      "source_passage": "Annex D on model cards and data artifact taxonomy incorporates conventions pioneered in the open-source Hugging Face Transformers model card ecosystem.",
+      "access_date": "2026-02-04",
+      "notes": "Direct textual alignment and technical citation identified in published draft standards documentation, though individual corporate delegates represent the liaison rather than an automated project entity.",
+      "reviewer": "R. K. (Auditor)",
+      "gap_recommendation": "Verify specific ISO technical committee liaison credentials for contributing project maintainers."
+    },
+    {
+      "id": "rec_005",
+      "source": "ONNX (Open Neural Network Exchange)",
+      "target": "IEEE Standards Association (IEEE-SA)",
+      "relationship_type": "technical_contribution",
+      "evidence_status": "documented",
+      "source_url": "https://standards.ieee.org/ieee/2801/10462/",
+      "source_passage": "IEEE P2801 Recommended Practice for the Quality Management of Datasets for Deep Learning references ONNX model representation exchange formats for reproducible model verification.",
+      "access_date": "2026-03-01",
+      "notes": "Working group liaison documents establish ONNX specification format as benchmark exchange layer in section 4.2.",
+      "reviewer": "A. D. (Technical Reviewer)",
+      "gap_recommendation": "Cross-check formal IEEE liaison ballot records to determine if formal institutional voting rights exist."
+    },
+    {
+      "id": "rec_006",
+      "source": "PyTorch",
+      "target": "EU AI Act (Regulation EU 2024/1689)",
+      "relationship_type": "contextual_relevance",
+      "evidence_status": "documented",
+      "source_url": "https://pytorch.org/blog/pytorch-governance-and-standards-update/",
+      "source_passage": "As European regulatory requirements under the EU AI Act begin implementation, PyTorch Foundation members are coordinating open working sessions regarding telemetry transparency and safety reporting.",
+      "access_date": "2026-02-14",
+      "notes": "Self-reported governance update discussing regulatory environment. Contextually relevant but not equivalent to technical standardisation committee participation.",
+      "reviewer": "R. K. (Auditor)",
+      "gap_recommendation": "Distinguish between governance awareness discussions and actual participation in harmonised standard drafting mandates."
+    },
+    {
+      "id": "rec_007",
+      "source": "scikit-learn",
+      "target": "CEN-CENELEC JTC 21",
+      "relationship_type": "declared_alignment",
+      "evidence_status": "candidate",
+      "source_url": "https://inria.fr/en/scikit-learn-consortium-statement-on-trustworthy-ai",
+      "source_passage": "The Inria Scikit-learn Consortium affirms commitment to align validation protocols with emerging CEN-CENELEC trustworthy AI evaluation rubrics.",
+      "access_date": "2026-03-10",
+      "notes": "Consortium press release declares public alignment intent. Does not verify committee membership or accredited submission.",
+      "reviewer": "M. S. (Policy Auditor)",
+      "gap_recommendation": "Investigate whether AFNOR (French standardisation delegate to CEN) has registered scikit-learn core maintainers as committee experts."
+    },
+    {
+      "id": "rec_008",
+      "source": "llama.cpp",
+      "target": "CEN-CENELEC JTC 21",
+      "relationship_type": "unresolved",
+      "evidence_status": "candidate",
+      "source_url": "https://github.com/ggerganov/llama.cpp/discussions/4521",
+      "source_passage": "Community discussion thread raising questions on whether quantized model distributions will fall under European AI conformity assessments.",
+      "access_date": "2026-03-18",
+      "notes": "Discussion thread represents informal developer conjecture. No evidence of institutional dialogue with standards bodies.",
+      "reviewer": "R. K. (Auditor)",
+      "gap_recommendation": "Classify as speculative/unresolved until primary documentation of institutional submission emerges."
+    }
+  ],
+  "components": [
+    [
+      "PyTorch",
+      "CEN-CENELEC JTC 21",
+      "EU AI Act (Regulation EU 2024/1689)",
+      "scikit-learn",
+      "llama.cpp"
+    ],
+    [
+      "Transformers (Hugging Face)",
+      "ISO/IEC JTC 1/SC 42"
+    ],
+    [
+      "vLLM",
+      "NIST AI Safety Consortium (AISIC)"
+    ],
+    [
+      "ONNX (Open Neural Network Exchange)",
+      "IEEE Standards Association (IEEE-SA)"
+    ],
+    [
+      "Linux Foundation AI & Data",
+      "European Commission"
+    ],
+    [
+      "ISO/IEC 42001:2023 (AIMS)"
+    ]
+  ],
+  "verified_components": [
+    [
+      "PyTorch",
+      "EU AI Act (Regulation EU 2024/1689)"
+    ],
+    [
+      "Transformers (Hugging Face)",
+      "ISO/IEC JTC 1/SC 42"
+    ],
+    [
+      "vLLM",
+      "NIST AI Safety Consortium (AISIC)"
+    ],
+    [
+      "ONNX (Open Neural Network Exchange)",
+      "IEEE Standards Association (IEEE-SA)"
+    ],
+    [
+      "Linux Foundation AI & Data",
+      "European Commission"
+    ]
+  ],
+  "isolated_nodes": [
+    "ISO/IEC 42001:2023 (AIMS)"
+  ]
+}

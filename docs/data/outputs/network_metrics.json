@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "date": "2026-10-20",
+    "calculation_engine": "Observatory Pure-Python Graph Engine"
+  },
+  "graph_level": {
+    "total_nodes": 14,
+    "total_edges": 8,
+    "verified_edges": 5,
+    "candidate_edges": 2,
+    "evidence_gaps": 1,
+    "density_overall": 0.0879,
+    "density_verified_only": 0.0549,
+    "average_degree": 1.14,
+    "average_verified_degree": 0.71,
+    "connected_components_count": 6,
+    "verified_components_count": 5,
+    "isolated_nodes_count": 1
+  },
+  "node_level": [
+    {
+      "name": "CEN-CENELEC JTC 21",
+      "entity_type": "standards_body",
+      "degree": 3,
+      "verified_degree": 0,
+      "degree_centrality": 0.2308,
+      "verified_degree_centrality": 0.0,
+      "betweenness_centrality": 0.0321,
+      "closeness_centrality": 0.2462,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "PyTorch",
+      "entity_type": "open_source_project",
+      "degree": 2,
+      "verified_degree": 1,
+      "degree_centrality": 0.1538,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0192,
+      "closeness_centrality": 0.2051,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "Transformers (Hugging Face)",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0769,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "vLLM",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0769,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "ONNX (Open Neural Network Exchange)",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0769,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "scikit-learn",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "verified_degree": 0,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.1538,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "llama.cpp",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "verified_degree": 0,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.1538,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "Linux Foundation AI & Data",
+      "entity_type": "institution",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0769,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "European Commission",
+      "entity_type": "institution",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0769,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "ISO/IEC JTC 1/SC 42",
+      "entity_type": "standards_body",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0769,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "NIST AI Safety Consortium (AISIC)",
+      "entity_type": "standards_body",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0769,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "IEEE Standards Association (IEEE-SA)",
+      "entity_type": "standards_body",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0769,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "EU AI Act (Regulation EU 2024/1689)",
+      "entity_type": "standard_or_framework",
+      "degree": 1,
+      "verified_degree": 1,
+      "degree_centrality": 0.0769,
+      "verified_degree_centrality": 0.0769,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.1368,
+      "clustering_coefficient": 0.0
+    },
+    {
+      "name": "ISO/IEC 42001:2023 (AIMS)",
+      "entity_type": "standard_or_framework",
+      "degree": 0,
+      "verified_degree": 0,
+      "degree_centrality": 0.0,
+      "verified_degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "clustering_coefficient": 0.0
+    }
+  ],
+  "sector_interactions": {
+    "open_source_project <-> standards_body": 6,
+    "open_source_project <-> standard_or_framework": 1,
+    "institution <-> institution": 1
+  }
+}

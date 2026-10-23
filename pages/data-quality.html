@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Quality & Audit · Stage 2 · Open-Source AI Standardisation Observatory</title>
+  <link rel="stylesheet" href="../assets/css/stage2.css">
+</head>
+<body>
+  <div id="stage2-header-mount"></div>
+
+  <main class="stage2-container">
+    <div id="stage2-notice-mount"></div>
+
+    <div class="stage2-page-header">
+      <h1 class="stage2-page-title">Data Quality & Evidential Audit</h1>
+      <p class="stage2-page-subtitle">
+        Automated validation audit evaluating every cataloged claim against the canonical 5-field schema. Identifies missing sources, verbatim passage completeness, unresolved gaps, and eligible records for network analysis.
+      </p>
+    </div>
+
+    <!-- KPI Summary Cards -->
+    <div class="stage2-grid-kpis" id="kpi-mount">
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Corpus Evaluated</div>
+        <div class="stage2-kpi-value" id="kpi-total">-</div>
+        <div class="stage2-kpi-sub">Total records submitted</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Schema Compliance</div>
+        <div class="stage2-kpi-value" id="kpi-compliance" style="color: var(--accent-green);">-</div>
+        <div class="stage2-kpi-sub">Valid 5-field schema records</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Passage Quoted</div>
+        <div class="stage2-kpi-value" id="kpi-passages" style="color: var(--accent-navy);">-</div>
+        <div class="stage2-kpi-sub">With verbatim citations</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Evidence Gaps</div>
+        <div class="stage2-kpi-value" id="kpi-gaps" style="color: var(--accent-red);">-</div>
+        <div class="stage2-kpi-sub">Action directives required</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Candidate Claims</div>
+        <div class="stage2-kpi-value" id="kpi-candidates" style="color: var(--accent-amber);">-</div>
+        <div class="stage2-kpi-sub">Unverified claims</div>
+      </div>
+    </div>
+
+    <!-- Section 1: Field Completeness & Schema Strictness -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">1. Canonical Field Completeness Audit</h2>
+        <span class="badge badge-verified">5 Mandatory Fields</span>
+      </div>
+      <p class="stage2-panel-desc">
+        Analysis requirements mandate zero missingness in canonical relationship fields. Optional audit fields are tracked to evaluate research depth.
+      </p>
+      <div class="stage2-table-wrapper">
+        <table class="stage2-table">
+          <thead>
+            <tr>
+              <th>Field Name</th>
+              <th>Requirement Tier</th>
+              <th>Present Count</th>
+              <th>Missing Count</th>
+              <th>Completeness Ratio</th>
+              <th>Compliance Status</th>
+            </tr>
+          </thead>
+          <tbody id="field-completeness-tbody">
+            <tr><td colspan="6" style="text-align: center; color: var(--text-dim);">Loading audit metrics...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Audit Issues & Anomaly Log -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">2. Record-Level Issues & Evidence Directives</h2>
+        <span class="badge badge-candidate" id="issues-counter">0 Issues Logged</span>
+      </div>
+      <p class="stage2-panel-desc">
+        Specific anomalies detected during validation, including missing excerpts, unaccredited claims, and required archival directives.
+      </p>
+      <div class="stage2-table-wrapper">
+        <table class="stage2-table">
+          <thead>
+            <tr>
+              <th>Record ID</th>
+              <th>Project</th>
+              <th>Standards Body / Process</th>
+              <th>Severity</th>
+              <th>Audit Finding & Required Primary Research</th>
+            </tr>
+          </thead>
+          <tbody id="issues-tbody">
+            <tr><td colspan="5" style="text-align: center; color: var(--text-dim);">Scanning audit records...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Entity Audit Coverage -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">3. Entity Verification Coverage Matrix</h2>
+        <span class="badge badge-documented">Cataloged Entities</span>
+      </div>
+      <p class="stage2-panel-desc">
+        Distribution of verified versus provisional candidate relationships across each cataloged open-source project and standards body.
+      </p>
+      <div class="stage2-table-wrapper">
+        <table class="stage2-table">
+          <thead>
+            <tr>
+              <th>Entity Name</th>
+              <th>Typology</th>
+              <th>Total Audited Ties</th>
+              <th>Verified / Documented</th>
+              <th>Candidate Claims</th>
+              <th>Evidence Gaps</th>
+              <th>Assurance Profile</th>
+            </tr>
+          </thead>
+          <tbody id="entity-audit-tbody">
+            <tr><td colspan="7" style="text-align: center; color: var(--text-dim);">Aggregating entity metrics...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="stage2-footer-mount"></div>
+
+  <script src="../assets/js/stage2-common.js"></script>
+  <script src="../assets/js/data-quality.js"></script>
+</body>
+</html>

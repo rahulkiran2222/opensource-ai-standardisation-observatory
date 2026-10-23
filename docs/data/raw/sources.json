@@ -1,0 +1,50 @@
+[
+  {
+    "id": "src_ec",
+    "name": "European Commission AI Standardisation & Policy Portal",
+    "source_type": "official_policy",
+    "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-act-standardisation",
+    "authority_level": "primary",
+    "coverage_notes": "Primary legislative directives, standardisation requests to CEN-CENELEC, and AI Office consultation filings."
+  },
+  {
+    "id": "src_cen",
+    "name": "CEN-CENELEC JTC 21 Artificial Intelligence Secretariat",
+    "source_type": "standards_body",
+    "url": "https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/",
+    "authority_level": "primary",
+    "coverage_notes": "Official work programmes, draft harmonised standard delivery schedules, and liaison body registers."
+  },
+  {
+    "id": "src_iso",
+    "name": "ISO/IEC JTC 1/SC 42 Artificial Intelligence Committee",
+    "source_type": "standards_body",
+    "url": "https://www.iso.org/committee/6794475.html",
+    "authority_level": "primary",
+    "coverage_notes": "Published global ISO/IEC standards, participating member bodies (P-members), and liaison organizations."
+  },
+  {
+    "id": "src_nist",
+    "name": "NIST Artificial Intelligence Safety Institute Consortium (AISIC)",
+    "source_type": "standards_body",
+    "url": "https://www.nist.gov/itl/artificial-intelligence/us-artificial-intelligence-safety-institute-consortium",
+    "authority_level": "primary",
+    "coverage_notes": "Official list of consortium member organizations, charters, and technical working group publications."
+  },
+  {
+    "id": "src_ieee",
+    "name": "IEEE Standards Association AI Programs",
+    "source_type": "standards_body",
+    "url": "https://standards.ieee.org",
+    "authority_level": "primary",
+    "coverage_notes": "Working group balloting rosters, approved PARs (Project Authorization Requests), and standard draft publications."
+  },
+  {
+    "id": "src_lf",
+    "name": "Linux Foundation AI & Data Governance Archive",
+    "source_type": "project_repository",
+    "url": "https://lfaidata.foundation",
+    "authority_level": "secondary",
+    "coverage_notes": "Consortium white papers, public policy consultation submissions, and member governance agreements."
+  }
+]

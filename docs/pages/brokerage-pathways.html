@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brokerage & Pathways · Stage 2 · Open-Source AI Standardisation Observatory</title>
+  <link rel="stylesheet" href="../assets/css/stage2.css">
+</head>
+<body>
+  <div id="stage2-header-mount"></div>
+
+  <main class="stage2-container">
+    <div id="stage2-notice-mount"></div>
+
+    <div class="stage2-page-header">
+      <h1 class="stage2-page-title">Brokerage Actors & Standardisation Pathways</h1>
+      <p class="stage2-page-subtitle">
+        Tracing intermediary umbrella foundations, cut vertices, and documented multi-hop pathways connecting open-source machine learning communities to formal European and global standards bodies.
+      </p>
+    </div>
+
+    <!-- Brokerage KPIs -->
+    <div class="stage2-grid-kpis">
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Structural Cut Vertices</div>
+        <div class="stage2-kpi-value" id="kpi-cut-vertices" style="color: var(--accent-terracotta);">-</div>
+        <div class="stage2-kpi-sub">Graph articulation points</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Documented Pathways</div>
+        <div class="stage2-kpi-value" id="kpi-pathways" style="color: var(--accent-navy);">-</div>
+        <div class="stage2-kpi-sub">Project ↔ SDO routes</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Direct Verified Ties</div>
+        <div class="stage2-kpi-value" id="kpi-direct-verified" style="color: var(--accent-green);">-</div>
+        <div class="stage2-kpi-sub">1-hop accredited links</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Max Path Distance</div>
+        <div class="stage2-kpi-value" id="kpi-max-hops">-</div>
+        <div class="stage2-kpi-sub">Hops across institutional tiers</div>
+      </div>
+    </div>
+
+    <!-- Section 1: Bridge Actors & Brokerage Profiles -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">1. Intermediary Bridge Actors & Structural Positions</h2>
+        <span class="badge badge-verified">Articulation Points</span>
+      </div>
+      <p class="stage2-panel-desc">
+        Identifies umbrella entities (such as Linux Foundation AI & Data) and consortium secretariats whose structural position bridges developer codebases to institutional policy channels.
+      </p>
+      <div class="stage2-table-wrapper">
+        <table class="stage2-table">
+          <thead>
+            <tr>
+              <th>Entity Name</th>
+              <th>Sector Typology</th>
+              <th>Degree</th>
+              <th>Structural Role</th>
+              <th>Bridge Score</th>
+              <th>Cut Vertex (Bridge)</th>
+              <th>Interfaced Sectors</th>
+            </tr>
+          </thead>
+          <tbody id="brokerage-tbody">
+            <tr><td colspan="7" style="text-align: center; color: var(--text-dim);">Analyzing bridge actors...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Interactive Documented Pathway Explorer -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">2. Documented Multi-Hop Pathway Tracer</h2>
+        <span class="badge badge-documented">Audited Step Verification</span>
+      </div>
+      <p class="stage2-panel-desc">
+        Select an open-source AI project and a standards body to inspect the evidence chain supporting institutional representation.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; background-color: #FAF8F5; padding: 1rem; border-radius: 6px; border: 1px solid var(--border-subtle);">
+        <div style="flex: 1; min-width: 220px;">
+          <label style="font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; color: var(--text-dim); display: block; margin-bottom: 0.35rem;">
+            Source Project:
+          </label>
+          <select id="select-project" style="width: 100%; padding: 0.45rem; font-size: 0.8rem; border: 1px solid var(--border-strong); border-radius: 4px; background: white;">
+            <option value="all">All Cataloged Projects</option>
+          </select>
+        </div>
+
+        <div style="flex: 1; min-width: 220px;">
+          <label style="font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; color: var(--text-dim); display: block; margin-bottom: 0.35rem;">
+            Target Standards Body / Process:
+          </label>
+          <select id="select-sdo" style="width: 100%; padding: 0.45rem; font-size: 0.8rem; border: 1px solid var(--border-strong); border-radius: 4px; background: white;">
+            <option value="all">All Target Bodies</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Pathways Results List -->
+      <div id="pathways-container" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="text-align: center; color: var(--text-dim); padding: 1.5rem;">Loading pathway chains...</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="stage2-footer-mount"></div>
+
+  <script src="../assets/js/stage2-common.js"></script>
+  <script src="../assets/js/brokerage-pathways.js"></script>
+</body>
+</html>

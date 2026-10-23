@@ -1,0 +1,114 @@
+[
+  {
+    "id": "pytorch",
+    "name": "PyTorch",
+    "entity_type": "open_source_project",
+    "official_url": "https://pytorch.org",
+    "description": "An open source machine learning framework supported by the Linux Foundation with widespread research adoption.",
+    "lead_maintainer_or_secretariat": "PyTorch Foundation / Linux Foundation"
+  },
+  {
+    "id": "huggingface_transformers",
+    "name": "Transformers (Hugging Face)",
+    "entity_type": "open_source_project",
+    "official_url": "https://github.com/huggingface/transformers",
+    "description": "State-of-the-art Machine Learning library for PyTorch, TensorFlow, and JAX providing unified model architectures.",
+    "lead_maintainer_or_secretariat": "Hugging Face Inc. & Open Community"
+  },
+  {
+    "id": "vllm",
+    "name": "vLLM",
+    "entity_type": "open_source_project",
+    "official_url": "https://github.com/vllm-project/vllm",
+    "description": "High-throughput and memory-efficient inference and serving engine for LLMs.",
+    "lead_maintainer_or_secretariat": "vLLM Core Team & UC Berkeley LMSYS"
+  },
+  {
+    "id": "onnx",
+    "name": "ONNX (Open Neural Network Exchange)",
+    "entity_type": "open_source_project",
+    "official_url": "https://onnx.ai",
+    "description": "Open ecosystem for interchangeable AI models across hardware runtimes and frameworks.",
+    "lead_maintainer_or_secretariat": "Linux Foundation AI & Data"
+  },
+  {
+    "id": "scikit_learn",
+    "name": "scikit-learn",
+    "entity_type": "open_source_project",
+    "official_url": "https://scikit-learn.org",
+    "description": "Predictive data analysis tool built on NumPy, SciPy, and matplotlib, fundamental to classical statistical ML.",
+    "lead_maintainer_or_secretariat": "Inria Foundation & Community Consortium"
+  },
+  {
+    "id": "llamacpp",
+    "name": "llama.cpp",
+    "entity_type": "open_source_project",
+    "official_url": "https://github.com/ggerganov/llama.cpp",
+    "description": "Port of LLM inference in C/C++ without external dependencies, widely adopted for edge and local AI deployment.",
+    "lead_maintainer_or_secretariat": "Georgi Gerganov & Open Community"
+  },
+  {
+    "id": "lf_ai_data",
+    "name": "Linux Foundation AI & Data",
+    "entity_type": "institution",
+    "official_url": "https://lfaidata.foundation",
+    "description": "Umbrella foundation supporting open source AI, machine learning, and data innovation.",
+    "jurisdiction": "Global / US 501(c)(6)"
+  },
+  {
+    "id": "european_commission",
+    "name": "European Commission",
+    "entity_type": "institution",
+    "official_url": "https://commission.europa.eu",
+    "description": "The executive body of the European Union responsible for drafting and enforcing the EU AI Act.",
+    "jurisdiction": "European Union"
+  },
+  {
+    "id": "cen_cenelec_jtc21",
+    "name": "CEN-CENELEC JTC 21",
+    "entity_type": "standards_body",
+    "official_url": "https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/",
+    "description": "Joint Technical Committee 21 on Artificial Intelligence tasked with drafting harmonised European standards supporting the EU AI Act.",
+    "jurisdiction": "Europe / CEN-CENELEC"
+  },
+  {
+    "id": "iso_iec_jtc1_sc42",
+    "name": "ISO/IEC JTC 1/SC 42",
+    "entity_type": "standards_body",
+    "official_url": "https://www.iso.org/committee/6794475.html",
+    "description": "International standards committee establishing global foundational standards on Artificial Intelligence (ISO/IEC 42001, 22989, 5338).",
+    "jurisdiction": "International (ISO / IEC)"
+  },
+  {
+    "id": "nist_aisic",
+    "name": "NIST AI Safety Consortium (AISIC)",
+    "entity_type": "standards_body",
+    "official_url": "https://www.nist.gov/itl/artificial-intelligence/us-artificial-intelligence-safety-institute-consortium",
+    "description": "Consortium supporting the US AI Safety Institute to develop science-based standards, guidelines, and red-teaming benchmarks.",
+    "jurisdiction": "United States"
+  },
+  {
+    "id": "ieee_sa",
+    "name": "IEEE Standards Association (IEEE-SA)",
+    "entity_type": "standards_body",
+    "official_url": "https://standards.ieee.org",
+    "description": "Global standardisation body leading ethical and technical AI specifications including IEEE 7000 series and P2801.",
+    "jurisdiction": "International"
+  },
+  {
+    "id": "eu_ai_act",
+    "name": "EU AI Act (Regulation EU 2024/1689)",
+    "entity_type": "standard_or_framework",
+    "official_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+    "description": "Comprehensive regulatory framework establishing risk-based obligations and harmonised standardisation mandates for AI systems.",
+    "jurisdiction": "European Union"
+  },
+  {
+    "id": "iso_iec_42001",
+    "name": "ISO/IEC 42001:2023 (AIMS)",
+    "entity_type": "standard_or_framework",
+    "official_url": "https://www.iso.org/standard/81230.html",
+    "description": "International standard specifying requirements for establishing, implementing, maintaining, and continually improving an AI management system.",
+    "jurisdiction": "International"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "name": "Open-Source AI Standardisation Observatory",
+  "description": "An auditable research engine, evidence database, and interactive network observatory investigating open-source AI participation in global standardisation and regulatory processes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

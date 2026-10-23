@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporal Analysis · Stage 2 · Open-Source AI Standardisation Observatory</title>
+  <link rel="stylesheet" href="../assets/css/stage2.css">
+</head>
+<body>
+  <div id="stage2-header-mount"></div>
+
+  <main class="stage2-container">
+    <div id="stage2-notice-mount"></div>
+
+    <div class="stage2-page-header">
+      <h1 class="stage2-page-title">Temporal Analysis & Regulatory Trajectory</h1>
+      <p class="stage2-page-subtitle">
+        Longitudinal tracking of open-source artificial intelligence standardisation actions over time. Evaluates chronological surges correlated with European AI Act CEN-CENELEC mandates and NIST AISIC working groups.
+      </p>
+    </div>
+
+    <!-- Reliability Assessment Notice -->
+    <div class="stage2-notice" style="border-left: 4px solid var(--accent-navy); background-color: #F8FAFC;">
+      <span class="stage2-notice-badge" style="background-color: var(--accent-navy);">Date Fidelity Check</span>
+      <div id="reliability-message">
+        Evaluating date reliability score and timestamp completeness across active corpus...
+      </div>
+    </div>
+
+    <!-- Temporal KPIs -->
+    <div class="stage2-grid-kpis">
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Dated Records Analyzed</div>
+        <div class="stage2-kpi-value" id="kpi-dated-total">-</div>
+        <div class="stage2-kpi-sub" id="kpi-dated-sub">100% with ISO timestamps</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Peak Regulatory Window</div>
+        <div class="stage2-kpi-value" id="kpi-peak-window" style="color: var(--accent-terracotta);">-</div>
+        <div class="stage2-kpi-sub" id="kpi-peak-sub">Highest event frequency</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">High-Assurance Velocity</div>
+        <div class="stage2-kpi-value" id="kpi-verified-velocity" style="color: var(--accent-green);">-</div>
+        <div class="stage2-kpi-sub">Independently verified/doc</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Temporal Coverage Index</div>
+        <div class="stage2-kpi-value" id="kpi-reliability-score" style="color: var(--accent-navy);">-</div>
+        <div class="stage2-kpi-sub">Sufficient date density</div>
+      </div>
+    </div>
+
+    <!-- Section 1: Chronological Velocity Timeline -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">1. Standardisation Event Frequency Timeline</h2>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <span class="badge badge-verified">Verified</span>
+          <span class="badge badge-candidate">Candidate</span>
+          <span class="badge badge-gap">Gap Audits</span>
+        </div>
+      </div>
+      <p class="stage2-panel-desc">
+        Aggregated monthly velocity of standardisation actions, consultation responses, and gap audits.
+      </p>
+
+      <div id="timeline-chart-container" style="background-color: #FAF8F5; border: 1px solid var(--border-subtle); border-radius: 6px; padding: 1.25rem;">
+        <div style="display: flex; flex-direction: column; gap: 1rem;" id="timeline-bars-mount">
+          <div style="text-align: center; color: var(--text-dim); padding: 1.5rem;">Loading timeline distribution...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Chronological Audit Ledger -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">2. Chronological Evidence Action Ledger</h2>
+        <span class="badge badge-documented">Timestamped Actions</span>
+      </div>
+      <p class="stage2-panel-desc">
+        Sequential log of individual audited relationships, corresponding regulatory milestones, and date verification statuses.
+      </p>
+      <div class="stage2-table-wrapper">
+        <table class="stage2-table">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Period</th>
+              <th>Project</th>
+              <th>Interfacing Body</th>
+              <th>Relationship Modality</th>
+              <th>Evidence Status</th>
+              <th>Regulatory Policy Milestone Context</th>
+            </tr>
+          </thead>
+          <tbody id="timeline-table-tbody">
+            <tr><td colspan="7" style="text-align: center; color: var(--text-dim);">Scanning chronological ledger...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="stage2-footer-mount"></div>
+
+  <script src="../assets/js/stage2-common.js"></script>
+  <script src="../assets/js/temporal-analysis.js"></script>
+</body>
+</html>

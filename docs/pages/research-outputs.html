@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Outputs & Reproducibility · Stage 2 · Open-Source AI Standardisation Observatory</title>
+  <link rel="stylesheet" href="../assets/css/stage2.css">
+</head>
+<body>
+  <div id="stage2-header-mount"></div>
+
+  <main class="stage2-container">
+    <div id="stage2-notice-mount"></div>
+
+    <div class="stage2-page-header">
+      <h1 class="stage2-page-title">Research Outputs & Reproducibility Dossier</h1>
+      <p class="stage2-page-subtitle">
+        Audited dataset releases, downloadable empirical matrices, methodology codebook, and reproduction instructions for the Open-Source AI Standardisation Observatory.
+      </p>
+    </div>
+
+    <!-- Graph-Level KPI Metrics -->
+    <div class="stage2-grid-kpis">
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Current Release</div>
+        <div class="stage2-kpi-value" style="color: var(--accent-terracotta);">v2.0.0</div>
+        <div class="stage2-kpi-sub">Stage 2 Gold Ledger</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Audited Artifacts</div>
+        <div class="stage2-kpi-value" id="kpi-artifacts-count" style="color: var(--accent-navy);">8</div>
+        <div class="stage2-kpi-sub">CSV, JSON & JSON-LD</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Schema Compliance</div>
+        <div class="stage2-kpi-value" id="kpi-schema-compliance" style="color: var(--accent-green);">100%</div>
+        <div class="stage2-kpi-sub">5-field canonical schema</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Cataloged Entities</div>
+        <div class="stage2-kpi-value" id="kpi-entities-count">-</div>
+        <div class="stage2-kpi-sub">Nodes in topology</div>
+      </div>
+      <div class="stage2-kpi-card">
+        <div class="stage2-kpi-label">Pipeline Engine</div>
+        <div class="stage2-kpi-value" style="font-size: 1.15rem; line-height: 2rem;">Pure Python</div>
+        <div class="stage2-kpi-sub">Zero external black boxes</div>
+      </div>
+    </div>
+
+    <!-- Section 1: Curated Downloadable Results & Artifacts -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">1. Curated Research Datasets & Generated Artifacts</h2>
+        <span class="badge badge-verified">RFC 4180 & JSON Standard</span>
+      </div>
+      <p class="stage2-panel-desc">
+        All generated results from the Stage 2 Python pipeline. Click <strong>Download</strong> to retrieve the file directly, or click <strong>Preview</strong> to inspect rows interactively below.
+      </p>
+
+      <div class="stage2-table-wrapper">
+        <table class="stage2-table" id="outputs-table">
+          <thead>
+            <tr>
+              <th>Artifact Name</th>
+              <th>Format</th>
+              <th>Category</th>
+              <th>Contents & Scope</th>
+              <th>Schema / Dimensions</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="outputs-tbody">
+            <!-- Dynamically populated by research-outputs.js -->
+            <tr>
+              <td><strong><code>network_metrics.csv</code></strong></td>
+              <td><span class="badge badge-verified">CSV</span></td>
+              <td>Node Metrics</td>
+              <td>Node-level degree, betweenness, closeness, and clustering coefficients.</td>
+              <td>8 columns · 14 rows</td>
+              <td>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="../data/outputs/network_metrics.csv" download="network_metrics.csv" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">↓ Download</a>
+                  <button onclick="previewArtifact('network_metrics.csv', 'csv')" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">👁 Preview</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><code>network_metrics.json</code></strong></td>
+              <td><span class="badge badge-documented">JSON</span></td>
+              <td>Graph Topology</td>
+              <td>Full graph-level metrics, density, components, and node centrality distributions.</td>
+              <td>Graph + Node Object</td>
+              <td>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="../data/outputs/network_metrics.json" download="network_metrics.json" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">↓ Download</a>
+                  <button onclick="previewArtifact('network_metrics.json', 'json')" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">👁 Preview</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><code>brokerage_pathways.json</code></strong></td>
+              <td><span class="badge badge-documented">JSON</span></td>
+              <td>Brokerage & Paths</td>
+              <td>Identified articulation vertices (cut vertices), bridge scores, and multi-hop paths.</td>
+              <td>14 profiles · 6 pathways</td>
+              <td>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="../data/outputs/brokerage_pathways.json" download="brokerage_pathways.json" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">↓ Download</a>
+                  <button onclick="previewArtifact('brokerage_pathways.json', 'json')" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">👁 Preview</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><code>temporal_analysis.json</code></strong></td>
+              <td><span class="badge badge-documented">JSON</span></td>
+              <td>Temporal Velocity</td>
+              <td>Longitudinal event timeline, date reliability scores, and regulatory surge peaks.</td>
+              <td>Timeline & Period Index</td>
+              <td>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="../data/outputs/temporal_analysis.json" download="temporal_analysis.json" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">↓ Download</a>
+                  <button onclick="previewArtifact('temporal_analysis.json', 'json')" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">👁 Preview</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><code>data_quality_audit.json</code></strong></td>
+              <td><span class="badge badge-candidate">JSON</span></td>
+              <td>Quality Audit</td>
+              <td>5-field schema completeness ratios, passage validation, and logged issues.</td>
+              <td>Audit & Anomaly Records</td>
+              <td>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="../data/outputs/data_quality_audit.json" download="data_quality_audit.json" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">↓ Download</a>
+                  <button onclick="previewArtifact('data_quality_audit.json', 'json')" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">👁 Preview</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><code>validated_nodes.json</code></strong></td>
+              <td><span class="badge badge-documented">JSON</span></td>
+              <td>Processed Nodes</td>
+              <td>Cataloged entity records with verified typology mappings and descriptions.</td>
+              <td>14 Entity Master Records</td>
+              <td>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="../data/processed/validated_nodes.json" download="validated_nodes.json" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">↓ Download</a>
+                  <button onclick="previewArtifact('validated_nodes.json', 'json', '../data/processed/')" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">👁 Preview</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><code>validated_edges.json</code></strong></td>
+              <td><span class="badge badge-documented">JSON</span></td>
+              <td>Processed Edges</td>
+              <td>Audited standardisation relationship ties with verification status codes.</td>
+              <td>8 Validated Dyads</td>
+              <td>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="../data/processed/validated_edges.json" download="validated_edges.json" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">↓ Download</a>
+                  <button onclick="previewArtifact('validated_edges.json', 'json', '../data/processed/')" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">👁 Preview</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong><code>evidence_records.csv</code></strong></td>
+              <td><span class="badge badge-verified">CSV</span></td>
+              <td>Raw Evidence</td>
+              <td>Primary source evidence ledger with verbatim quoted excerpts and official URLs.</td>
+              <td>RFC 4180 Canonical Format</td>
+              <td>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="../data/raw/evidence_records.csv" download="evidence_records.csv" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem;">↓ Download</a>
+                  <button onclick="previewArtifact('evidence_records.csv', 'csv', '../data/raw/')" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">👁 Preview</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 2: Interactive Data Preview Drawer -->
+    <section class="stage2-panel" id="preview-section" style="display: none;">
+      <div class="stage2-panel-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <h2 class="stage2-panel-title" id="preview-title">Data Preview</h2>
+          <span class="badge badge-verified" id="preview-badge">Live</span>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="preview-copy-btn" onclick="copyPreviewData()" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; cursor: pointer;">
+            📋 Copy Content
+          </button>
+          <button onclick="closePreview()" class="stage2-btn" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; background: #FAF8F5; border: 1px solid var(--border-strong); cursor: pointer;">
+            ✕ Close Preview
+          </button>
+        </div>
+      </div>
+      <p class="stage2-panel-desc" id="preview-desc">
+        Inspecting sample records from the generated artifact.
+      </p>
+
+      <div id="preview-table-container" class="stage2-table-wrapper" style="max-height: 400px; overflow-y: auto; display: none;">
+        <table class="stage2-table" id="preview-table">
+          <thead id="preview-thead"></thead>
+          <tbody id="preview-tbody"></tbody>
+        </table>
+      </div>
+
+      <pre id="preview-raw" style="display: none; background: #1C1917; color: #FAF8F5; padding: 1rem; border-radius: 6px; font-family: var(--font-mono); font-size: 0.75rem; max-height: 400px; overflow: auto; line-height: 1.4;"></pre>
+    </section>
+
+    <!-- Section 3: Dataset Versions & Release History -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">2. Dataset Versions & Release History</h2>
+        <span class="badge badge-verified">Semantic Versioning (SemVer)</span>
+      </div>
+      <p class="stage2-panel-desc">
+        Formal research releases tracked under open provenance standards. Every minor and major release maintains schema backwards compatibility.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <!-- Version 2.0.0 -->
+        <div style="background-color: #FAF8F5; border: 1px solid var(--border-subtle); border-left: 4px solid var(--accent-terracotta); border-radius: 6px; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">
+                Release v2.0.0 · Stage 2 Empirical Graph Engine
+              </h3>
+              <span class="badge badge-verified">Current Gold Ledger</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">
+              Released: October 2026
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.5;">
+            Major milestone implementing Stage 2 analytical capabilities: Pure-Python graph metrics calculation (degree, betweenness, closeness, clustering), cut-vertex bridge detection (Linux Foundation AI & Data articulation point), longitudinal temporal analysis under EU AI Act Standardisation Mandate M/593, and RFC 4180 audit validation tests.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); border-top: 1px dashed var(--border-strong); pt: 0.75rem; padding-top: 0.75rem;">
+            <div><strong>Nodes:</strong> 14 entities</div>
+            <div><strong>Edges:</strong> 8 audited links</div>
+            <div><strong>Components:</strong> 6 BFS partitions</div>
+            <div><strong>Bridge Actors:</strong> 1 cut vertex</div>
+            <div><strong>Integrity:</strong> 100% 5-field compliance</div>
+          </div>
+        </div>
+
+        <!-- Version 1.2.0 -->
+        <div style="background-color: #FAF8F5; border: 1px solid var(--border-subtle); border-left: 4px solid var(--accent-navy); border-radius: 6px; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--text-primary);">
+                Release v1.2.0 · Candidate Matcher & Verbatim Excerpt Mandate
+              </h3>
+              <span class="badge badge-documented">Archived</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">
+              Released: September 2026
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5;">
+            Introduced candidate claim pairing engine, formal evidence gap directives, and strict verbatim excerpt citation requirements to prevent unsupported assertions.
+          </p>
+        </div>
+
+        <!-- Version 1.0.0 -->
+        <div style="background-color: #FAF8F5; border: 1px solid var(--border-subtle); border-left: 4px solid var(--border-strong); border-radius: 6px; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--text-primary);">
+                Release v1.0.0 · Baseline 5-Field Observational Schema
+              </h3>
+              <span class="badge badge-documented">Initial Release</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">
+              Released: August 2026
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5;">
+            Initial seed corpus tracking premier open-source AI projects (PyTorch, ONNX, Hugging Face, vLLM, OpenVINO) across CEN-CENELEC JTC 21, ISO/IEC JTC 1/SC 42, and NIST AISIC.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Pure-Python Pipeline Execution & Reproducibility Protocol -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">3. Computational Reproducibility Protocol</h2>
+        <span class="badge badge-verified">100% Deterministic</span>
+      </div>
+      <p class="stage2-panel-desc">
+        The Stage 2 analytical pipeline is built entirely in Pure Python using Python standard libraries (<code>csv</code>, <code>json</code>, <code>math</code>, <code>unittest</code>). No external machine learning models or black-box dependencies are required to execute or reproduce findings.
+      </p>
+
+      <div style="background: #1C1917; color: #FAF8F5; border-radius: 6px; padding: 1.25rem; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
+          <span style="color: #A8A29E;"># Terminal Pipeline Execution Protocol</span>
+          <button onclick="copyTerminalCommands()" class="stage2-btn" style="background: #333; color: white; border: none; font-size: 0.7rem; padding: 0.25rem 0.6rem; cursor: pointer;">
+            📋 Copy Commands
+          </button>
+        </div>
+        <pre id="terminal-commands" style="line-height: 1.6; overflow-x: auto; color: #E7E5E4;">
+<span style="color: #78716C;"># 1. Validate raw evidence records and generate schema quality audit</span>
+python3 analysis/validate_data.py
+
+<span style="color: #78716C;"># 2. Build network graph topology and map connected components</span>
+python3 analysis/build_network.py
+
+<span style="color: #78716C;"># 3. Calculate structural graph measures (degree, betweenness, closeness, density)</span>
+python3 analysis/calculate_metrics.py
+
+<span style="color: #78716C;"># 4. Trace multi-hop standardisation pathways and detect cut vertices</span>
+python3 analysis/analyse_pathways.py
+
+<span style="color: #78716C;"># 5. Run full test suite to verify mathematical and topological integrity</span>
+python3 tests/test_validation.py
+python3 tests/test_network.py</pre>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+        <div style="background: #FAF8F5; border: 1px solid var(--border-subtle); border-radius: 6px; padding: 1rem;">
+          <h4 style="font-family: var(--font-serif); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--accent-navy);">
+            1. Data Ingestion & Sanitization
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;">
+            Validates <code>data/raw/evidence_records.csv</code> against RFC 4180 standards. Evaluates mandatory fields and flags unverified candidate claims into <code>data_quality_audit.json</code>.
+          </p>
+        </div>
+
+        <div style="background: #FAF8F5; border: 1px solid var(--border-subtle); border-radius: 6px; padding: 1rem;">
+          <h4 style="font-family: var(--font-serif); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--accent-terracotta);">
+            2. Adjacency Graph Construction
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;">
+            Constructs adjacency matrices for verified-only and full-spectrum topologies in <code>data/processed/network_graph.json</code>. Performs BFS search to map isolated components.
+          </p>
+        </div>
+
+        <div style="background: #FAF8F5; border: 1px solid var(--border-subtle); border-radius: 6px; padding: 1rem;">
+          <h4 style="font-family: var(--font-serif); font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--accent-green);">
+            3. Brandes Betweenness & Articulation
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45;">
+            Executes Brandes betweenness centrality and Tarjan-based articulation point analysis to isolate single points of failure bridging open-source and institutional SDOs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Academic Attribution & Citation -->
+    <section class="stage2-panel">
+      <div class="stage2-panel-header">
+        <h2 class="stage2-panel-title">4. Academic Attribution & Citation</h2>
+        <span class="badge badge-documented">Open Commons Research</span>
+      </div>
+      <p class="stage2-panel-desc">
+        If citing this dataset or empirical methodology in academic publications, policy briefings, or regulatory responses, please format your attribution as follows:
+      </p>
+
+      <!-- BibTeX Box -->
+      <div style="background: #FAF8F5; border: 1px solid var(--border-strong); border-radius: 6px; padding: 1.25rem; margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); font-weight: bold;">
+            BibTeX Citation
+          </span>
+          <button onclick="copyBibtexCitation()" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.3rem 0.65rem; cursor: pointer;">
+            📋 Copy BibTeX
+          </button>
+        </div>
+        <pre id="bibtex-citation" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-primary); line-height: 1.5; overflow-x: auto; margin: 0;">@dataset{opensource_ai_standardisation_observatory_2026,
+  author    = {Open-Source AI Standardisation Observatory Contributors},
+  title     = {Open-Source AI Standardisation Observatory: Empirical Research Ledger, Structural Graph Measures, and Brokerage Pathways (Stage 2)},
+  year      = {2026},
+  version   = {2.0.0},
+  url       = {https://github.com/open-source-ai-standardisation-observatory},
+  note      = {Audited evidentiary database covering CEN-CENELEC JTC 21, ISO/IEC JTC 1/SC 42, and NIST AISIC}
+}</pre>
+      </div>
+
+      <!-- APA Citation Box -->
+      <div style="background: #FAF8F5; border: 1px solid var(--border-subtle); border-radius: 6px; padding: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); font-weight: bold;">
+            APA 7th Edition
+          </span>
+          <button onclick="copyApaCitation()" class="stage2-btn stage2-btn-secondary" style="font-size: 0.75rem; padding: 0.3rem 0.65rem; cursor: pointer;">
+            📋 Copy APA
+          </button>
+        </div>
+        <div id="apa-citation" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+          Open-Source AI Standardisation Observatory Contributors. (2026). <em>Open-Source AI Standardisation Observatory: Empirical Research Ledger, Structural Graph Measures, and Brokerage Pathways (Stage 2)</em> (Version 2.0.0) [Data set and network engine]. https://github.com/open-source-ai-standardisation-observatory
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="stage2-footer-mount"></div>
+
+  <script src="../assets/js/stage2-common.js"></script>
+  <script src="../assets/js/research-outputs.js"></script>
+</body>
+</html>

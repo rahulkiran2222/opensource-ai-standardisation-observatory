@@ -1,0 +1,180 @@
+{
+  "audit_timestamp": "2026-10-20T00:00:00Z",
+  "total_records_evaluated": 8,
+  "total_entities_cataloged": 14,
+  "valid_records_count": 8,
+  "rejected_records_count": 0,
+  "duplicate_records_count": 0,
+  "missing_passage_count": 1,
+  "missing_date_count": 0,
+  "unverified_candidate_count": 2,
+  "gap_records_count": 1,
+  "verified_records_count": 5,
+  "field_completeness": {
+    "project": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    },
+    "institution_or_process": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    },
+    "relationship_type": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    },
+    "evidence_status": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    },
+    "source_url": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    },
+    "source_passage": {
+      "present_count": 7,
+      "total_records": 8,
+      "completeness_pct": 87.5
+    },
+    "access_date": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    },
+    "notes": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    },
+    "reviewer": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    },
+    "gap_recommendation": {
+      "present_count": 8,
+      "total_records": 8,
+      "completeness_pct": 100.0
+    }
+  },
+  "issues": [],
+  "entity_audit": {
+    "PyTorch": {
+      "entity_type": "open_source_project",
+      "total_records": 2,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 1
+    },
+    "Transformers (Hugging Face)": {
+      "entity_type": "open_source_project",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "vLLM": {
+      "entity_type": "open_source_project",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "ONNX (Open Neural Network Exchange)": {
+      "entity_type": "open_source_project",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "scikit-learn": {
+      "entity_type": "open_source_project",
+      "total_records": 1,
+      "verified_records": 0,
+      "candidate_records": 1,
+      "gap_records": 0
+    },
+    "llama.cpp": {
+      "entity_type": "open_source_project",
+      "total_records": 1,
+      "verified_records": 0,
+      "candidate_records": 1,
+      "gap_records": 0
+    },
+    "Linux Foundation AI & Data": {
+      "entity_type": "institution",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "European Commission": {
+      "entity_type": "institution",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "CEN-CENELEC JTC 21": {
+      "entity_type": "standards_body",
+      "total_records": 3,
+      "verified_records": 0,
+      "candidate_records": 2,
+      "gap_records": 1
+    },
+    "ISO/IEC JTC 1/SC 42": {
+      "entity_type": "standards_body",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "NIST AI Safety Consortium (AISIC)": {
+      "entity_type": "standards_body",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "IEEE Standards Association (IEEE-SA)": {
+      "entity_type": "standards_body",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "EU AI Act (Regulation EU 2024/1689)": {
+      "entity_type": "standard_or_framework",
+      "total_records": 1,
+      "verified_records": 1,
+      "candidate_records": 0,
+      "gap_records": 0
+    },
+    "ISO/IEC 42001:2023 (AIMS)": {
+      "entity_type": "standard_or_framework",
+      "total_records": 0,
+      "verified_records": 0,
+      "candidate_records": 0,
+      "gap_records": 0
+    }
+  },
+  "status_distribution": {
+    "gap": 1,
+    "independently_verified": 2,
+    "documented": 3,
+    "candidate": 2
+  },
+  "relationship_distribution": {
+    "formal_membership": 2,
+    "consultation_response": 1,
+    "technical_contribution": 2,
+    "contextual_relevance": 1,
+    "declared_alignment": 1,
+    "unresolved": 1
+  }
+}

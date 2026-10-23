@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "date": "2026-10-20",
+    "methodology": "Stage 2 Articulation Point & Pathway Tracing"
+  },
+  "cut_vertices": [
+    "PyTorch",
+    "CEN-CENELEC JTC 21"
+  ],
+  "verified_cut_vertices": [],
+  "brokerage_profiles": [
+    {
+      "name": "PyTorch",
+      "entity_type": "open_source_project",
+      "degree": 2,
+      "connected_sectors": [
+        "standard_or_framework",
+        "standards_body"
+      ],
+      "sector_count": 2,
+      "is_cut_vertex": true,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 2.83,
+      "brokerage_role": "Critical Structural Bridge"
+    },
+    {
+      "name": "CEN-CENELEC JTC 21",
+      "entity_type": "standards_body",
+      "degree": 3,
+      "connected_sectors": [
+        "open_source_project"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": true,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.73,
+      "brokerage_role": "Sector Hub"
+    },
+    {
+      "name": "Transformers (Hugging Face)",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "connected_sectors": [
+        "standards_body"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "vLLM",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "connected_sectors": [
+        "standards_body"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "ONNX (Open Neural Network Exchange)",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "connected_sectors": [
+        "standards_body"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "scikit-learn",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "connected_sectors": [
+        "standards_body"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "llama.cpp",
+      "entity_type": "open_source_project",
+      "degree": 1,
+      "connected_sectors": [
+        "standards_body"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "Linux Foundation AI & Data",
+      "entity_type": "institution",
+      "degree": 1,
+      "connected_sectors": [
+        "institution"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "European Commission",
+      "entity_type": "institution",
+      "degree": 1,
+      "connected_sectors": [
+        "institution"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "ISO/IEC JTC 1/SC 42",
+      "entity_type": "standards_body",
+      "degree": 1,
+      "connected_sectors": [
+        "open_source_project"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "NIST AI Safety Consortium (AISIC)",
+      "entity_type": "standards_body",
+      "degree": 1,
+      "connected_sectors": [
+        "open_source_project"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "IEEE Standards Association (IEEE-SA)",
+      "entity_type": "standards_body",
+      "degree": 1,
+      "connected_sectors": [
+        "open_source_project"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "EU AI Act (Regulation EU 2024/1689)",
+      "entity_type": "standard_or_framework",
+      "degree": 1,
+      "connected_sectors": [
+        "open_source_project"
+      ],
+      "sector_count": 1,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 1.0,
+      "brokerage_role": "Peripheral Liaison"
+    },
+    {
+      "name": "ISO/IEC 42001:2023 (AIMS)",
+      "entity_type": "standard_or_framework",
+      "degree": 0,
+      "connected_sectors": [],
+      "sector_count": 0,
+      "is_cut_vertex": false,
+      "is_verified_cut_vertex": false,
+      "bridge_score": 0.0,
+      "brokerage_role": "Isolated Entity"
+    }
+  ],
+  "documented_pathways": [
+    {
+      "project": "Transformers (Hugging Face)",
+      "standards_body": "ISO/IEC JTC 1/SC 42",
+      "hop_count": 1,
+      "path_nodes": [
+        "Transformers (Hugging Face)",
+        "ISO/IEC JTC 1/SC 42"
+      ],
+      "evidence_assurance": "Fully Documented/Verified",
+      "steps": [
+        {
+          "from": "Transformers (Hugging Face)",
+          "to": "ISO/IEC JTC 1/SC 42",
+          "relationship_id": "rec_004",
+          "relationship_type": "technical_contribution",
+          "evidence_status": "documented",
+          "source_url": "https://www.iso.org/standard/81230.html",
+          "source_passage": "Annex D on model cards and data artifact taxonomy incorporates conventions pioneered in the open-source Hugging Face Transformers model card ecosystem."
+        }
+      ]
+    },
+    {
+      "project": "vLLM",
+      "standards_body": "NIST AI Safety Consortium (AISIC)",
+      "hop_count": 1,
+      "path_nodes": [
+        "vLLM",
+        "NIST AI Safety Consortium (AISIC)"
+      ],
+      "evidence_assurance": "Fully Documented/Verified",
+      "steps": [
+        {
+          "from": "vLLM",
+          "to": "NIST AI Safety Consortium (AISIC)",
+          "relationship_id": "rec_002",
+          "relationship_type": "formal_membership",
+          "evidence_status": "independently_verified",
+          "source_url": "https://www.nist.gov/itl/artificial-intelligence/us-artificial-intelligence-safety-institute-consortium-members",
+          "source_passage": "Member organizations contributing open-source serving architectures, high-performance runtime verification tools, and benchmark infrastructures include the vLLM project community under open consortium charter."
+        }
+      ]
+    },
+    {
+      "project": "ONNX (Open Neural Network Exchange)",
+      "standards_body": "IEEE Standards Association (IEEE-SA)",
+      "hop_count": 1,
+      "path_nodes": [
+        "ONNX (Open Neural Network Exchange)",
+        "IEEE Standards Association (IEEE-SA)"
+      ],
+      "evidence_assurance": "Fully Documented/Verified",
+      "steps": [
+        {
+          "from": "ONNX (Open Neural Network Exchange)",
+          "to": "IEEE Standards Association (IEEE-SA)",
+          "relationship_id": "rec_005",
+          "relationship_type": "technical_contribution",
+          "evidence_status": "documented",
+          "source_url": "https://standards.ieee.org/ieee/2801/10462/",
+          "source_passage": "IEEE P2801 Recommended Practice for the Quality Management of Datasets for Deep Learning references ONNX model representation exchange formats for reproducible model verification."
+        }
+      ]
+    },
+    {
+      "project": "PyTorch",
+      "standards_body": "CEN-CENELEC JTC 21",
+      "hop_count": 1,
+      "path_nodes": [
+        "PyTorch",
+        "CEN-CENELEC JTC 21"
+      ],
+      "evidence_assurance": "Contains Evidence Gap",
+      "steps": [
+        {
+          "from": "PyTorch",
+          "to": "CEN-CENELEC JTC 21",
+          "relationship_id": "rec_001",
+          "relationship_type": "formal_membership",
+          "evidence_status": "gap",
+          "source_url": "https://github.com/pytorch/pytorch",
+          "source_passage": ""
+        }
+      ]
+    },
+    {
+      "project": "scikit-learn",
+      "standards_body": "CEN-CENELEC JTC 21",
+      "hop_count": 1,
+      "path_nodes": [
+        "scikit-learn",
+        "CEN-CENELEC JTC 21"
+      ],
+      "evidence_assurance": "Contains Candidate Claim",
+      "steps": [
+        {
+          "from": "scikit-learn",
+          "to": "CEN-CENELEC JTC 21",
+          "relationship_id": "rec_007",
+          "relationship_type": "declared_alignment",
+          "evidence_status": "candidate",
+          "source_url": "https://inria.fr/en/scikit-learn-consortium-statement-on-trustworthy-ai",
+          "source_passage": "The Inria Scikit-learn Consortium affirms commitment to align validation protocols with emerging CEN-CENELEC trustworthy AI evaluation rubrics."
+        }
+      ]
+    },
+    {
+      "project": "llama.cpp",
+      "standards_body": "CEN-CENELEC JTC 21",
+      "hop_count": 1,
+      "path_nodes": [
+        "llama.cpp",
+        "CEN-CENELEC JTC 21"
+      ],
+      "evidence_assurance": "Contains Candidate Claim",
+      "steps": [
+        {
+          "from": "llama.cpp",
+          "to": "CEN-CENELEC JTC 21",
+          "relationship_id": "rec_008",
+          "relationship_type": "unresolved",
+          "evidence_status": "candidate",
+          "source_url": "https://github.com/ggerganov/llama.cpp/discussions/4521",
+          "source_passage": "Community discussion thread raising questions on whether quantized model distributions will fall under European AI conformity assessments."
+        }
+      ]
+    }
+  ]
+}
